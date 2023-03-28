@@ -1,0 +1,19 @@
+#sup {
+    display: inline-grid;
+    grid-template-rows: auto auto;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: aquamarine;
+    text-align: center ;
+    border-radius: 10px;
+    padding: 2px;
+    margin: 5px;
+}
+
+#sup:hover {
+    transform: scale(1.05);
+}
+
+h2 {
+    font-family: sans-serif;
+}

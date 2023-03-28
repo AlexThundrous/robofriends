@@ -19,10 +19,13 @@ class App extends React.Component  {
   }   
 
   render() {
-  const filteredrobots = this.state.robots.filter(robot => {
-    return robot.name.toLowerCase().includes(this.state.searchfield.toLowerCase())
+  const {robots, searchfield} = this.state;
+  const filteredrobots = robots.filter(robot => {
+    return robot.name.toLowerCase().includes(searchfield.toLowerCase())
   })
-  return(
+  return !robots.length === 0 ?
+ <h1> Loading </h1> : 
+ (
     <div class="App">
        <h1> RoboFriends </h1>
        <Searchbox searchChange = {(event) => {this.onSearchChange(event)}}/>
@@ -34,5 +37,6 @@ class App extends React.Component  {
   );
 }
 }
+
 
 export default App;
